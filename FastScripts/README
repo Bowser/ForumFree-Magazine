@@ -1,7 +1,0 @@
-@Niccolo': ora il server dovrebbe funzionare correttamente, ho implementato gli script direttamente come CGI e Flask funziona.
-Per questo troverai un file .cgi nella directory src, esso si occupa di far partire il programma.
-
-Ho anche implementato delle funzioni utili in un .htaccess:
--index.cgi inaccessibile al pubblico, possiamo fare lo stesso anche con gli altri volendo (rendendo accessibile il sito solo con /)
--apache considera le richieste fatte a /admin/, o altre cose, fatte normalmente a index.cgi (quindi facendo funzionare flask come avevamo parlato)
--redirect da /admin a /admin/
