@@ -1,0 +1,12 @@
+{% extends "wrapper.html" %}
+{% block title %}Up Support{% endblock %}
+
+{% block content %}
+	{% if output == '' %}
+		<a href="?support_id=12345&support_isText=1&support_text=LOL&check=auto">First</a>
+		<a href="?support_id=43123&support_isText=0&support_text=LINK_IMG&check=auto">Second</a>
+		<a href="?support_id=69&support_text=TESTO&check=auto">Third</a>
+	{% else %}
+		{{output}}
+	{% endif %}
+{% endblock %}

@@ -1,3 +1,5 @@
+La base è correttamente implementata, vedere i file per il funzionamento
+--------------------------------------------------------------------------------------------------------------
 @Niccolo': ora il server dovrebbe funzionare correttamente, ho implementato gli script direttamente come CGI e Flask funziona.
 Per questo troverai un file .cgi nella directory src, esso si occupa di far partire il programma.
 

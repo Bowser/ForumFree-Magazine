@@ -3,15 +3,11 @@
 	<head>
 		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
 		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-		<script type="text/javascript"><!--
-		{{script}}
-		// --></script>
-		<title>Admin Page</title>
-		<style type="text/css">
-		{{style}}
-		</style>
+		<title>{% block title %}{% endblock %} - Generator</title>
 	</head>
 	<body>
-		Admin Page - In costruzione
+		<div>
+			{% block content %}{% endblock %}
+		</div>
 	</body>
 </html>

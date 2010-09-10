@@ -1,0 +1,12 @@
+{% extends "wrapper.html" %}
+{% block title %}Anti Copiatura{% endblock %}
+
+{% block content %}
+	{% if output == '' %}
+		<a href="?nocopy_select=1&check=auto">First</a>
+		<a href="?nocopy_select=2&check=auto">Second</a>
+		<a href="?nocopy_select=3&check=auto">Third</a>
+	{% else %}
+		{{output}}
+	{% endif %}
+{% endblock %}

@@ -1,5 +1,6 @@
 RewriteEngine On
 #RewriteRule index.cgi /fastscripts/src/ [R=301,L]
 #RewriteRule ^admin/$ index.cgi/admin/ [L]
-RewriteRule ^([^/]+)/$ index.cgi/$1/ [L]
+RewriteRule ^([^/]+)/$ index.cgi/$1/ [QSA,L]
 RewriteRule ^([^/.]+)$ /fastscripts/src/$1/ [R=301,L]
+RewriteRule ^generator/([^/]+)$ index.cgi/generator/$1 [QSA,L]
