@@ -34,7 +34,7 @@ import os
 app = Flask(__name__)
 
 # ----- Index ------
-@app.route("/index")
+@app.route("/")
 def index():
 	try:
 		script = Markup(request.args['script'])
