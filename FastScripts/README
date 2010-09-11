@@ -1,6 +1,8 @@
+@Niccolo: bisogna vedere bene come Flask passa i dati ai template, non possiamo utilizzare una sola variabile.
+--------------------------------------------------------------------------------------------------------------
 La base e' correttamente implementata, vedere i file per il funzionamento
 --------------------------------------------------------------------------------------------------------------
-@Niccolo': ora il server dovrebbe funzionare correttamente, ho implementato gli script direttamente come CGI e Flask funziona.
+Ora il server dovrebbe funzionare correttamente, ho implementato gli script direttamente come CGI e Flask funziona.
 Per questo troverai un file .cgi nella directory src, esso si occupa di far partire il programma.
 
 Ho anche implementato delle funzioni utili in un .htaccess:
