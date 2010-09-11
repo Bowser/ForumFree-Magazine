@@ -1,13 +1,30 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-		<title>{% block title %}{% endblock %} - Generator</title>
+		<title>{% block page_title %}{% endblock %} - Generator</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<base href="http://devel.ffmagazine.net/fastscripts/src/">
+		<link rel="stylesheet" href="files/styles.css" type="text/css">
 	</head>
 	<body>
 		<div>
-			{% block content %}{% endblock %}
+			<table class="skin_tbl" align="center" cellpadding="0" cellspacing="0"><tr><td class="mleft_top"></td><td><table class="mback" width="100%" cellpadding="0" cellspacing="0"><tr><td class="mback_left"></td><td class="mback_center">
+
+				<div class="mtitle">{% block title %}{% endblock %}</div>
+
+			</td><td class="mback_right"></td></tr></table></td><td class="mright_top"></td></tr><tr><td class="mleft"></td><td><table class="mainbg" style="text-align:center;width:100%" cellpadding="4" cellspacing="1">
+
+			<!-- <tr>
+				<td class="title" colspan="1">SOTTOTITOLO</td>
+			</tr> -->
+
+			<tr title="RIGA1">
+				<td class="ww">
+					{% block content %}{% endblock %}
+				</td>
+			</tr>
+
+			</table></td><td class="mright"></td></tr><tr><td class="mleft_bottom"></td><td><table class="msub" width="100%" cellpadding="0" cellspacing="0"><tr><td class="msub_left"></td><td class="msub_center">&nbsp;</td><td class="msub_right"></td></tr></table></td><td class="mright_bottom"></td></tr></table><br><br>
 		</div>
 	</body>
 </html>

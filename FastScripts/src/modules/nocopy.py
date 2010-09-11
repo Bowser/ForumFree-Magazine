@@ -33,7 +33,7 @@ class generator:
 	__check = ''
 
 	__alert = ''
-	__select = 1
+	__select = ''
 	
 	def __init__(self):
 		try:
@@ -42,17 +42,19 @@ class generator:
 			pass
 			
 		try:
-			self.__check = str(request.args['check'])
+			self.__check = str(request.values['check'])
 		except:
 			pass
 			
 		try:
-			self.__alert = str(request.args['nocopy_message'])
+			self.__alert = str(request.values['nocopy_message'])
 		except:
 			pass
 
 		if len(self.__check) > 0:
 			self.__script = self.__load()
+		elif self.__select != '':
+			self.__script = self.__select
 		
 	def __load(self):
 		if self.__select == 1:
@@ -81,10 +83,10 @@ document.oncontextmenu=document.onselectstart=document.ondragstart=function() {r
 			return '''<script type="text/javascript">
 //Generato con il FFMag FastScripts - Script by Bowser
 var tdmessaggio = "%s";
-document.oncontextmenu=function(){ alert(tdmessaggio + "\nAdesso apparira il menu'"); return true; }
+document.oncontextmenu=function(){ alert(tdmessaggio + "\\nAdesso apparira il menu'"); return true; }
 </script>''' % self.__alert
 		else:
-			return 'ERROR'
+			return 'ERRORE'
 
 	def output(self):
 		return self.__script

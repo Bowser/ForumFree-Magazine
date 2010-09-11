@@ -55,6 +55,7 @@ def generatore(gen_name):
 	if (gen_name + '.py') in gen_list:
 		gen_load = __import__('modules.'+gen_name, globals(), locals(), ['generator'], -1)
 		gen = gen_load.generator()
+
 		output = gen.output()
 
 		html = render_template('modules/'+gen_name+'.html', output=output)

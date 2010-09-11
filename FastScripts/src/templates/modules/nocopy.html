@@ -1,12 +1,35 @@
 {% extends "wrapper.html" %}
-{% block title %}Anti Copiatura{% endblock %}
+{% block page_title %}Anti Copiatura{% endblock %}
+{% block title %}Scripts Anti Copiatura{% endblock %}
 
 {% block content %}
 	{% if output == '' %}
-		<a href="?nocopy_select=1&check=auto">First</a>
-		<a href="?nocopy_select=2&check=auto">Second</a>
-		<a href="?nocopy_select=3&check=auto">Third</a>
+					<h2>Seleziona lo script</h2>
+					<a href="generator/nocopy?nocopy_select=1">Primo</a> &middot;
+					<a href="generator/nocopy?nocopy_select=2">Second</a> &middot;
+					<a href="generator/nocopy?nocopy_select=3">Third</a>
+	{% elif output is number %}
+					<h2>Modulo di generazione script anti-copiatura</h2>
+					{% if output == 1 %}
+						<form action="generator/nocopy?nocopy_select=1" method="post">
+							<input type="text" name="nocopy_message">
+							<input type="hidden" name="check" value="auto">
+							<input type="submit" name="submit" value="Procedi">
+						</form>
+					{% elif output == 3 %}
+						<form action="generator/nocopy?nocopy_select=3" method="post">
+							<input type="text" name="nocopy_message">
+							<input type="hidden" name="check" value="auto">
+							<input type="submit" name="submit" value="Procedi">
+						</form>
+					{% else %}
+						<form action="generator/nocopy?nocopy_select=2" method="post">
+							<input type="hidden" name="check" value="auto">
+							<input type="submit" name="submit" value="Procedi">
+						</form>
+					{% endif %}
 	{% else %}
-		{{output}}
+					<pre>{{output}}</pre>
+					<a href="javascript:history.back()">< Torna indietro</a>
 	{% endif %}
 {% endblock %}
